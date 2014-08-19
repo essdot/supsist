@@ -38,7 +38,7 @@ function defaultTransform(s) {
 function make(transformFunc) {
 	var newSS = new SuperSimpleStream
 
-	if(transformFunc) {
+	if(transformFunc && typeof transformFunc === 'function') {
 		newSS.__transform = transformFunc
 	}
 

@@ -6,5 +6,6 @@
   "dependencies": {
   },
   "author": "essdot (Justin Sippel)",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/essdot/supsist.git"
 }

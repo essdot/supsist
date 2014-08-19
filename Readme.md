@@ -17,3 +17,11 @@ var appendStream = supsist(function(s) {
 	return s + '1234'
 })
 ```
+
+
+## FAQ
+
+### Q: Wait, how do I...
+### A: I 'unno.  
+
+# ¯\\\_😐_/¯

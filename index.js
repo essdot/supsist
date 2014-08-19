@@ -13,7 +13,14 @@ function SuperSimpleStream() {
 
 SuperSimpleStream.prototype._transform = function SuperSimpleStreamTransform(chunk, encoding, callback) {
 	var s = chunk.toString()
-	var returnVal = this.__transform(s)
+
+	var returnVal
+
+	if(this.__transform) {
+		returnVal = this.__transform(s)
+	} else {
+		returnVal = defaultTransform.call(this, s)
+	}
 
 	if(returnVal) {
 		this.push(returnVal.toString())
@@ -22,7 +29,9 @@ SuperSimpleStream.prototype._transform = function SuperSimpleStreamTransform(chu
 	callback()
 }
 
-SuperSimpleStream.prototype.__transform = function defaultTransform(s) {
+SuperSimpleStream.prototype.__transform = defaultTransform
+
+function defaultTransform(s) {
 	return s
 }
 

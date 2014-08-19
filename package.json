@@ -1,0 +1,10 @@
+{
+  "name": "supsist",
+  "version": "0.0.1",
+  "description": "Super simple streams",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "author": "essdot (Justin Sippel)",
+  "license": "MIT"
+}
